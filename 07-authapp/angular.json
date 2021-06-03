@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "micelanius": {
+    "authapp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/micelanius",
+            "outputPath": "dist/authapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,14 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/b4/css/bootstrap.min.css",
-              "src/assets/fontawesome-free-5.14.0-web/css/all.css"
+              "src/styles.css"
             ],
-            "scripts": [  
-              "src/assets/jquery/jquery-3.5.1.slim.js",
-              "src/assets/b4/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -67,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "micelanius:build"
+            "browserTarget": "authapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "micelanius:build:production"
+              "browserTarget": "authapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "micelanius:build"
+            "browserTarget": "authapp:build"
           }
         },
         "test": {
@@ -115,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "micelanius:serve"
+            "devServerTarget": "authapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "micelanius:serve:production"
+              "devServerTarget": "authapp:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "micelanius"
+  "defaultProject": "authapp"
 }
